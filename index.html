@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Password Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Secure Password Generator</h1>
+        <div class="settings">
+            <label for="length">Password Length: </label>
+            <input type="number" id="length" min="8" max="20" value="12">
+            
+            <div class="checkboxes">
+                <label for="upperCase">Uppercase</label>
+                <input type="checkbox" id="upperCase" checked>
+
+                <label for="lowerCase">Lowercase</label>
+                <input type="checkbox" id="lowerCase" checked>
+
+                <label for="numbers">Numbers</label>
+                <input type="checkbox" id="numbers" checked>
+
+                <label for="symbols">Symbols</label>
+                <input type="checkbox" id="symbols" checked>
+            </div>
+        </div>
+        
+        <button id="generate" onclick="generatePassword()">Generate Password</button>
+
+        <div class="result">
+            <input type="text" id="password" readonly>
+            <button id="copy" onclick="copyPassword()">Copy</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; <span id="year"></span> MiniProjectBytes. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
